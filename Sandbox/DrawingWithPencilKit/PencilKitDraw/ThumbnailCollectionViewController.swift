@@ -45,6 +45,12 @@ class ThumbnailCollectionViewController: UICollectionViewController, DataModelCo
         dataModelController.newDrawing()
     }
     
+    /// Action method: Delete a last drawing.
+    @IBAction func deleteDrawing(_ sender: Any) {
+        dataModelController.deleteDrawing()
+    }
+    
+    
     // MARK: Collection View Data Source
     
     /// Data source method: Number of sections.

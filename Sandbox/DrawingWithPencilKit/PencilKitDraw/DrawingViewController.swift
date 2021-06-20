@@ -186,15 +186,19 @@ class DrawingViewController: UIViewController, PKCanvasViewDelegate, PKToolPicke
     /// Helper method to set a suitable content size for the canvas view.
     func updateContentSizeForDrawing() {
         // Update the content size to match the drawing.
-        let drawing = canvasView.drawing
+        //let drawing = canvasView.drawing
         let contentHeight: CGFloat
         
         // Adjust the content size to always be bigger than the drawing height.
+        /* Ted: the following if-condition is for auto-sizing
         if !drawing.bounds.isNull {
             contentHeight = max(canvasView.bounds.height, (drawing.bounds.maxY + DrawingViewController.canvasOverscrollHeight) * canvasView.zoomScale)
         } else {
             contentHeight = canvasView.bounds.height
-        }
+        }*/
+        // temporally the size is held with the following line
+        contentHeight = canvasView.bounds.height - canvasView.safeAreaInsets.top
+        
         canvasView.contentSize = CGSize(width: DataModel.canvasWidth * canvasView.zoomScale, height: contentHeight)
     }
     

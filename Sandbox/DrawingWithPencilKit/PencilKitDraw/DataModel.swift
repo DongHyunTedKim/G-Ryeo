@@ -202,4 +202,11 @@ class DataModelController {
         thumbnails.append(UIImage())
         updateDrawing(newDrawing, at: dataModel.drawings.count - 1)
     }
+    
+    /// Delete a last drawing in the data model.
+    func deleteDrawing() {
+        dataModel.drawings.removeLast()
+        thumbnails.removeLast()
+        didChange()
+    }
 }
