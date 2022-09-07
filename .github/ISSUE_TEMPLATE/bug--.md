@@ -1,11 +1,3 @@
----
-name: "Bug\U0001F41E"
-title: "[BUG] "
-labels: bug
-assignees: ''
-
----
-
 ### Description
 어떤 버그가 생기는지 명확하고 간결하게 설명합니다.
 
