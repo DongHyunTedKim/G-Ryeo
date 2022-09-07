@@ -1,6 +1,5 @@
 ---
 name: "Bug\U0001F41E"
-about: 버그리포트
 title: "[BUG] "
 labels: bug
 assignees: ''
